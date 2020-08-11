@@ -5,11 +5,12 @@ export const theme = {
   dark: true,
   colors: {
     ...DefaultTheme.colors,
-    primary: '#000000',
-    secondary: '#000000',
-    accent: '#000000',
-    backgroundcolor: '#888888',
-    surface: '#ffffff',
+    primary: '#5ddbfa',
+    accent: '#ffffff',
+    backgroundcolor: '#282c34',
+    surface: '#33373e',
+    text: '#ffffff',
+    placeholder: '#5ddbfa',
     error: '#f13a59',
   },
 };

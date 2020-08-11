@@ -8,6 +8,7 @@ import Icon from 'react-native-vector-icons/Ionicons';
 import { HomeScreen, ProfileScreen, SettingsScreen } from '../screens/OtherScreens';
 import BarcodeStackScreens from './BarcodeStackScreens';
 import {ProcedureSelection} from '../screens/BarcodeStack';
+import { theme } from '../core/theme';
 
 const Tab = createMaterialBottomTabNavigator();
 
@@ -22,7 +23,7 @@ const MainTabScreens = () => (
         component={HomeScreen}
         options={{
           tabBarLabel: 'Home',
-          tabBarColor: '#d02860',
+          tabBarColor: theme.colors.surface,
           tabBarIcon: ({ color }) => (
             <Icon name="ios-home" color={color} size={26} />
           ),
@@ -33,7 +34,7 @@ const MainTabScreens = () => (
         component={BarcodeStackScreens}
         options={{
           tabBarLabel: 'Explore',
-          tabBarColor: '#009387',
+          tabBarColor: theme.colors.surface,
           tabBarIcon: ({ color }) => (
             <Icon name="ios-aperture" color={color} size={26} />
           ),
@@ -44,7 +45,7 @@ const MainTabScreens = () => (
         component={ProcedureSelection}
         options={{
           tabBarLabel: 'Setting',
-          tabBarColor: '#1f65ff',
+          tabBarColor: theme.colors.surface,
           tabBarIcon: ({ color }) => (
             <Icon name="ios-notifications" color={color} size={26} />
           ),
@@ -55,7 +56,7 @@ const MainTabScreens = () => (
         component={ProfileScreen}
         options={{
           tabBarLabel: 'Profile',
-          tabBarColor: '#694fad',
+          tabBarColor: theme.colors.surface,
           tabBarIcon: ({ color }) => (
             <Icon name="ios-person" color={color} size={26} />
           ),

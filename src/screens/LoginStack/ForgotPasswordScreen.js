@@ -66,7 +66,7 @@ const styles = StyleSheet.create({
     marginTop: 12,
   },
   label: {
-    color: theme.colors.secondary,
+    color: theme.colors.accent,
     width: '100%',
   },
 });

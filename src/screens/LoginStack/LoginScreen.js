@@ -105,7 +105,7 @@ const styles = StyleSheet.create({
     marginTop: 4,
   },
   label: {
-    color: theme.colors.secondary,
+    color: theme.colors.accent,
   },
   link: {
     fontWeight: 'bold',
