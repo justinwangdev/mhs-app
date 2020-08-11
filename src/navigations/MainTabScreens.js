@@ -6,8 +6,9 @@ import { NavigationContainer } from '@react-navigation/native';
 import Icon from 'react-native-vector-icons/Ionicons';
 
 import { HomeScreen, ProfileScreen, SettingsScreen } from '../screens/OtherScreens';
-import BarcodeStackScreens from './BarcodeStackScreens';
-import {ProcedureSelection} from '../screens/BarcodeStack';
+import InsertionStackScreens from './InsertionStackScreens';
+import QueryStackScreens from './QueryStackScreens';
+import { InsertProcedure } from '../screens/InsertionStack';
 import { theme } from '../core/theme';
 
 const Tab = createMaterialBottomTabNavigator();
@@ -30,8 +31,8 @@ const MainTabScreens = () => (
         }}
       />
       <Tab.Screen
-        name="Barcode"
-        component={BarcodeStackScreens}
+        name="Insert"
+        component={InsertionStackScreens}
         options={{
           tabBarLabel: 'Explore',
           tabBarColor: theme.colors.surface,
@@ -42,7 +43,7 @@ const MainTabScreens = () => (
       />
       <Tab.Screen
         name="DEBUG"
-        component={ProcedureSelection}
+        component={QueryStackScreens}
         options={{
           tabBarLabel: 'Setting',
           tabBarColor: theme.colors.surface,

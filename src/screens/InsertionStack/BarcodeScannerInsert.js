@@ -2,7 +2,7 @@ import React, { useState, useEffect, memo } from "react";
 import { Text, View, StyleSheet, Button } from "react-native";
 import { BarCodeScanner } from "expo-barcode-scanner";
 
-function ContainerBarcodeScanner({ navigation: { navigate }, route }) {
+function BarcodeScannerInsert({ navigation: { navigate }, route }) {
   const [hasPermission, setHasPermission] = useState(null);
   const [scanned, setScanned] = useState(false);
 
@@ -16,7 +16,7 @@ function ContainerBarcodeScanner({ navigation: { navigate }, route }) {
   const handleBarCodeScanned = ({ type, data }) => {
     //setScanned(true);
     //alert(`Bar code with type ${type} and data ${data} has been scanned!`);
-    navigate("ProcedureSelection", {rawdata:data});
+    navigate("InsertProcedure", {rawdata:data});
   };
 
   if (hasPermission === null) {
@@ -50,4 +50,4 @@ function ContainerBarcodeScanner({ navigation: { navigate }, route }) {
     </View>
   );
 }
-export default memo(ContainerBarcodeScanner);
+export default memo(BarcodeScannerInsert);

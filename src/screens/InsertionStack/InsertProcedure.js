@@ -1,12 +1,12 @@
 import React, { memo, useState, useEffect } from 'react';
-import { Alert } from 'react-native';
+import { Alert, View } from 'react-native';
 
 import { Background, Header, Button, TextInput, DropDown } from '../../components';
 import { apis } from '../../core/apis';
 import { worknoValidator, containernoValidator, containerWeightValidator, procedureValidator } from '../../core/utils';
 import { IndicatorScreen } from '../OtherScreens'
 
-const ProcedureSelection = ({ route }) => {
+const InsertProcedure = ({ route }) => {
 
     const [isLoading, setIsLoading] = useState(true);
     const [workno, setWorkno] = useState({ value: route, error: '' });
@@ -133,12 +133,12 @@ const ProcedureSelection = ({ route }) => {
                     error={!!weight.error}
                     errorText={weight.error}
                 />
-
+                
                 <Button mode="contained" onPress={_onSubmitPreesed}>
                     寫入資料庫
-            </Button>
+                    </Button>
             </Background>
         )
 }
 
-export default memo(ProcedureSelection);
+export default memo(InsertProcedure);
