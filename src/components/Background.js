@@ -3,6 +3,8 @@ import {
   ImageBackground,
   StyleSheet,
   KeyboardAvoidingView,
+  StatusBar,
+  SafeAreaView
 } from 'react-native';
 import { theme } from '../core/theme';
 
@@ -10,9 +12,12 @@ const Background = ({ children }) => (
   <ImageBackground
     style={styles.background}
   >
-    <KeyboardAvoidingView style={styles.container} behavior="padding">
-      {children}
-    </KeyboardAvoidingView>
+    <SafeAreaView style={{flex:1}}>
+      <StatusBar barStyle='light-content' />
+      <KeyboardAvoidingView style={styles.container} behavior="padding">
+        {children}
+      </KeyboardAvoidingView>
+    </SafeAreaView>
   </ImageBackground>
 );
 

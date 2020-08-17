@@ -1,9 +1,9 @@
 import React, { memo } from 'react';
-import { View, StyleSheet, Text } from 'react-native';
+import { StyleSheet } from 'react-native';
 import DropDownPicker from 'react-native-dropdown-picker';
 import { theme } from '../core/theme';
 
-const DropDown = ({error , ...props }) => (
+const DropDown = ({error, ...props }) => (
     <DropDownPicker
       containerStyle={styles.container}
       style={error?(styles.error):(styles.inner)}

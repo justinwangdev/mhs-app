@@ -6,8 +6,9 @@ import { apis } from '../../core/apis';
 import { worknoValidator } from '../../core/utils';
 
 const SearchScreen = ({ navigation: { navigate }, route }) => {
-
     const [workno, setWorkno] = useState({ value: '', error: '' });
+    const [rawData, setRawData] = useState([]);
+
     const _onSubmitPreesed = () => {
         const worknoError = worknoValidator(workno.value);
         if (worknoError) {
@@ -16,7 +17,7 @@ const SearchScreen = ({ navigation: { navigate }, route }) => {
         }
         else {
             sendQuery();
-            navigate("ResultScreen");
+            navigate("ResultScreen", {rawData});
             return;
         };
     }
@@ -28,7 +29,7 @@ const SearchScreen = ({ navigation: { navigate }, route }) => {
                 Accept: "application/json",
                 "Content-Type": "application/json",
             },
-            body: JSON.stringify({        
+            body: JSON.stringify({
                 workno: workno.value,
             }),
         })
@@ -39,7 +40,7 @@ const SearchScreen = ({ navigation: { navigate }, route }) => {
                         '提示',
                         '查詢成功'
                     )
-                    console.log(responsejson);
+                    setRawData(responsejson);
                 } else {
                     Alert.alert(
                         '提示',
@@ -48,7 +49,6 @@ const SearchScreen = ({ navigation: { navigate }, route }) => {
                 }
             });
     }
-
 
     return (
         <Background>
@@ -64,7 +64,7 @@ const SearchScreen = ({ navigation: { navigate }, route }) => {
             />
             <Button mode="contained" onPress={_onSubmitPreesed}>
                 查詢
-                    </Button>
+            </Button>
         </Background>
     )
 }
