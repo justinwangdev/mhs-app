@@ -1,5 +1,5 @@
 import React, { memo, useState, useEffect } from 'react';
-import { Alert, View } from 'react-native';
+import { Alert } from 'react-native';
 
 import { Background, Header, Button, TextInput, DropDown, BackButton } from '../../components';
 import { apis } from '../../core/apis';
