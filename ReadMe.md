@@ -1,18 +1,9 @@
----
-title: 'MHS-APP'
-disqus: hackmd
----
-
 MHS-APP
 ===
-![build](https://img.shields.io/appveyor/ci/:user/:repo.svg)
-
-## Table of Contents
-
-[TOC]
 
 ## Usage
 
+> build at Mac OS Catalina 10.15.6, Node.js v12.18.2, expo-cli 3.22.1
 
 1. Install Nodejs.
 2. Install Expo-cli.
