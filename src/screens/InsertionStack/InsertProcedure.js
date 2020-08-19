@@ -1,12 +1,12 @@
 import React, { memo, useState, useEffect } from 'react';
 import { Alert, View } from 'react-native';
 
-import { Background, Header, Button, TextInput, DropDown } from '../../components';
+import { Background, Header, Button, TextInput, DropDown, BackButton } from '../../components';
 import { apis } from '../../core/apis';
 import { worknoValidator, containernoValidator, containerWeightValidator, procedureValidator } from '../../core/utils';
 import { IndicatorScreen } from '../OtherScreens'
 
-const InsertProcedure = ({ route }) => {
+const InsertProcedure = ({ route, navigation }) => {
 
     const [isLoading, setIsLoading] = useState(true);
     const [workno, setWorkno] = useState({ value: route, error: '' });
@@ -94,6 +94,7 @@ const InsertProcedure = ({ route }) => {
     else
         return (
             <Background>
+                <BackButton goBack={() => navigation.goBack()} />
                 <Header>新增製程</Header>
                 <TextInput
                     label="派工單號"
@@ -133,7 +134,7 @@ const InsertProcedure = ({ route }) => {
                     error={!!weight.error}
                     errorText={weight.error}
                 />
-                
+
                 <Button mode="contained" onPress={_onSubmitPreesed}>
                     寫入資料庫
                     </Button>

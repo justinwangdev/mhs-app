@@ -4,5 +4,6 @@ export const apis = {
   apiLogin: serverURL.concat("login/checking"),
   apiGetCodeTable: serverURL.concat("barcode/codetable"),
   apiSendInsertion: serverURL.concat("barcode/inserting"),
-  apiSendQuery: serverURL.concat("query/forwarding")
+  apiSendQuery: serverURL.concat("query/forwarding"),
+  apiGetEmployeeName: serverURL.concat("users/name")
 };

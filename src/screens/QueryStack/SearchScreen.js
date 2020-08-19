@@ -34,11 +34,6 @@ const SearchScreen = ({ navigation: { navigate }, route }) => {
             .then((response) => response.json())
             .then((responsejson) => {
                 if (!(responsejson.length < 1 || responsejson == undefined)) {
-                    Alert.alert(
-                        '提示',
-                        '查詢成功'
-                    )
-                    // console.log(responsejson.containers);
                     navigate("ResultScreen", { rawData: responsejson });
                 } else {
                     Alert.alert(

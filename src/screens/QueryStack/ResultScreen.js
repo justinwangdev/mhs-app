@@ -1,19 +1,31 @@
 import React, { memo, useState, useEffect } from 'react';
-import { Background, BackButton, Header } from '../../components';
+import { Background, BackButton, Header, Paragraph } from '../../components';
 import { ScrollView } from 'react-native';
 import { DataTable } from 'react-native-paper';
 
 const ResultScreen = ({ navigation, route }) => {
     const [tableContent, setTableContent] = useState();
     const [containerNo, setContainerNo] = useState(0);
+    const [productContent, setProductContent] = useState();
     const rawData = route.params.rawData;
-    const numOfContainers = rawData.containers.length - 1 ;
+    const numOfContainers = rawData.containers.length - 1;
+
+    useEffect(() => {
+        let product = rawData.product[0];
+        setProductContent(
+            <Paragraph>
+                {` ${product.ProductType}\n`}
+                {`${product.spec1}${product.spec2} `}
+                {`${product.nutshape}${product.size1}*${product.size2}`}
+                {product.size3 != null? (`*${product.size3}`):(``)}
+            </Paragraph>
+        )
+    }, [])
 
     useEffect(() => {
         var tmpContent = [];
         var procedure = {};
         let container = rawData.containers[containerNo + 1];
-        console.log(container);
         for (var key in rawData.name) {
             for (var index in container) {
                 if (container[index].flowno == rawData.code[key]) {
@@ -36,12 +48,13 @@ const ResultScreen = ({ navigation, route }) => {
         <Background>
             <BackButton goBack={() => navigation.goBack()} />
             <Header>查詢結果</Header>
-            <ScrollView style={{ width: '100%', marginTop: '5%', marginBottom: '10%' }}>
+            {productContent}
+            <ScrollView style={{ width: '100%', marginBottom: '10%' }}>
                 <DataTable>
                     <DataTable.Header>
                         <DataTable.Title>製程</DataTable.Title>
-                        <DataTable.Title numeric>來重</DataTable.Title>
-                        <DataTable.Title numeric>去重</DataTable.Title>
+                        <DataTable.Title numeric>重量</DataTable.Title>
+                        <DataTable.Title numeric>回重</DataTable.Title>
                     </DataTable.Header>
 
                     {tableContent}

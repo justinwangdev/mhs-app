@@ -13,6 +13,10 @@ function BarcodeScannerInsert({ navigation: { navigate }, route }) {
     })();
   }, []);
 
+  useEffect(()=>{
+    setScanned(false);
+  },[])
+
   const handleBarCodeScanned = ({ type, data }) => {
     //setScanned(true);
     //alert(`Bar code with type ${type} and data ${data} has been scanned!`);
@@ -39,14 +43,14 @@ function BarcodeScannerInsert({ navigation: { navigate }, route }) {
         style={StyleSheet.absoluteFillObject}
       />
 
-      {/* {scanned && (
+      
         <Button
-          title={"Tap to Scan Again"}
+          mode="contained"
+          title={scanned?"scanned":"手動輸入"}
           onPress={() => {
-            setScanned(false);
+            navigate("InsertProcedure");
           }}
         />
-      )} */}
     </View>
   );
 }
