@@ -9,12 +9,12 @@ const HomeScreen = ({ navigation }) => {
   return (
     <Background>
       <Logo />
-      <Header>Let’s work</Header>
+      <Header>上工囉！</Header>
       <Paragraph>
-        You are working.
+        去工作
     </Paragraph>
       <Button onPress={() => signOut()}>
-        Logout
+        登出
     </Button>
     </Background>
   );

@@ -11,7 +11,7 @@ const Welcome = ({ navigation }) => (
       Est. 1978
     </Paragraph>
     <Button mode="contained" onPress={() => navigation.navigate('LoginScreen')}>
-      Login
+      登入
     </Button>
 
   </Background>

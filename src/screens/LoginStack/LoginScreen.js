@@ -41,10 +41,10 @@ const LoginScreen = ({ navigation }) => {
           }
           else {
             if (responseJson.type == "userName") {
-              alert("Username not exist!");
+              alert("使用者不存在！");
             }
             else {
-              alert("Wrong password!!");
+              alert("密碼錯誤！");
             }
           }
         })
@@ -57,10 +57,10 @@ const LoginScreen = ({ navigation }) => {
 
       <Logo />
 
-      <Header>Welcome back.</Header>
+      <Header>歡迎回來</Header>
 
       <TextInput
-        label="Username"
+        label="使用者帳號"
         returnKeyType="next"
         value={username.value}
         onChangeText={text => setUsername({ value: text, error: '' })}
@@ -70,7 +70,7 @@ const LoginScreen = ({ navigation }) => {
       />
 
       <TextInput
-        label="Password"
+        label="密碼"
         returnKeyType="done"
         value={password.value}
         onChangeText={text => setPassword({ value: text, error: '' })}
@@ -83,12 +83,12 @@ const LoginScreen = ({ navigation }) => {
         <TouchableOpacity
           onPress={() => navigation.navigate('ForgotPasswordScreen')}
         >
-          <Text style={styles.label}>Forgot your password?</Text>
+          <Text style={styles.label}>忘記密碼？</Text>
         </TouchableOpacity>
       </View>
 
       <Button mode="contained" onPress={_onLoginPressed}>
-        Login
+        登入
       </Button>
     </Background>
   );

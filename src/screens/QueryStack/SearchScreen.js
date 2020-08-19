@@ -7,7 +7,6 @@ import { worknoValidator } from '../../core/utils';
 
 const SearchScreen = ({ navigation: { navigate }, route }) => {
     const [workno, setWorkno] = useState({ value: '', error: '' });
-    const [rawData, setRawData] = useState([]);
 
     const _onSubmitPreesed = () => {
         const worknoError = worknoValidator(workno.value);
@@ -17,7 +16,6 @@ const SearchScreen = ({ navigation: { navigate }, route }) => {
         }
         else {
             sendQuery();
-            navigate("ResultScreen", {rawData});
             return;
         };
     }
@@ -40,7 +38,8 @@ const SearchScreen = ({ navigation: { navigate }, route }) => {
                         '提示',
                         '查詢成功'
                     )
-                    setRawData(responsejson);
+                    // console.log(responsejson.containers);
+                    navigate("ResultScreen", { rawData: responsejson });
                 } else {
                     Alert.alert(
                         '提示',

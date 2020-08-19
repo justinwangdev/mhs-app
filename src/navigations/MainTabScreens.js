@@ -23,7 +23,7 @@ const MainTabScreens = () => (
         name="Home"
         component={HomeScreen}
         options={{
-          tabBarLabel: 'Home',
+          tabBarLabel: '首頁',
           tabBarColor: theme.colors.surface,
           tabBarIcon: ({ color }) => (
             <Icon name="ios-home" color={color} size={26} />
@@ -34,7 +34,7 @@ const MainTabScreens = () => (
         name="Insert"
         component={InsertionStackScreens}
         options={{
-          tabBarLabel: 'Explore',
+          tabBarLabel: '插入',
           tabBarColor: theme.colors.surface,
           tabBarIcon: ({ color }) => (
             <Icon name="ios-aperture" color={color} size={26} />
@@ -45,10 +45,10 @@ const MainTabScreens = () => (
         name="DEBUG"
         component={QueryStackScreens}
         options={{
-          tabBarLabel: 'Setting',
+          tabBarLabel: '查詢',
           tabBarColor: theme.colors.surface,
           tabBarIcon: ({ color }) => (
-            <Icon name="ios-notifications" color={color} size={26} />
+            <Icon name="ios-search" color={color} size={26} />
           ),
         }}
       />
@@ -56,7 +56,7 @@ const MainTabScreens = () => (
         name="Profile"
         component={ProfileScreen}
         options={{
-          tabBarLabel: 'Profile',
+          tabBarLabel: '個人資料',
           tabBarColor: theme.colors.surface,
           tabBarIcon: ({ color }) => (
             <Icon name="ios-person" color={color} size={26} />
