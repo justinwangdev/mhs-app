@@ -37,7 +37,7 @@ const LoginScreen = ({ navigation }) => {
         .then((responseJson) => {
           if (responseJson.matching) {
             //navigation.navigate('HomeScreen');
-            signIn();
+            signIn(responseJson.ID);
           }
           else {
             if (responseJson.type == "userName") {
