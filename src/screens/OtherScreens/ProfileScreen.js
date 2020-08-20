@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import AsyncStorage from '@react-native-community/async-storage';
 import { Background, Paragraph, Header } from '../../components';
 import { apis } from '../../core/apis';
-import { IndicatorScreen } from '../OtherScreens';
+import IndicatorScreen from '../OtherScreens/IndicatorScreen';
 
 const ProfileScreen = () => {
   const [employeeName, setEmployeeName] = useState();
