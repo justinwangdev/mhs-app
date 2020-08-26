@@ -21,16 +21,7 @@ const SearchScreen = ({ navigation: { navigate }, route }) => {
     }
 
     const sendQuery = () => {
-        return fetch(apis.apiSendQuery, {
-            method: "POST",
-            headers: {
-                Accept: "application/json",
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify({
-                workno: workno.value,
-            }),
-        })
+        return fetch(`${apis.apiPurchaseOrderItem}?workno=${workno.value}`)
             .then((response) => response.json())
             .then((responsejson) => {
                 if (!(responsejson.length < 1 || responsejson == undefined)) {

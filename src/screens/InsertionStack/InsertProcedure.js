@@ -30,7 +30,7 @@ const InsertProcedure = ({ route, navigation }) => {
                 barCodeData.length)
         });
 
-        fetch(apis.apiGetCodeTable)
+        fetch(apis.apiCodeTable, { method: 'GET' })
             .then((response) => response.json())
             .then((responsejson) => {
                 setCodeTable(responsejson);
@@ -58,7 +58,7 @@ const InsertProcedure = ({ route, navigation }) => {
     }
 
     const sendDataToServer = () => {
-        return fetch(apis.apiSendInsertion, {
+        return fetch(apis.apiContainerflow, {
             method: "POST",
             headers: {
                 Accept: "application/json",
@@ -76,9 +76,7 @@ const InsertProcedure = ({ route, navigation }) => {
                 if (!(responsejson.length < 1 || responsejson == undefined)) {
                     Alert.alert(
                         '提示',
-                        '此流程原本就存在於系統中，重量為'
-                        + responsejson[0].goweight
-                        + 'KG，已覆寫為' + weight.value + 'kg',
+                        `此流程原本就存在於系統中，重量為${responsejson[0].goweight}KG，已覆寫為${weight.value}kg`,
                     )
                 } else {
                     Alert.alert(

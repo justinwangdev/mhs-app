@@ -19,16 +19,7 @@ const ProfileScreen = () => {
     } catch (e) {
       console.log(e);
     }
-    return fetch(apis.apiGetEmployeeName, {
-      method: "POST",
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        userToken: userToken,
-      }),
-    })
+    return fetch(`${apis.apiUserInfo}/employeeName/${userToken}`)
       .then((response) => response.json())
       .then((responsejson) => {
         if (!(responsejson.length < 1 || responsejson == undefined)) {
