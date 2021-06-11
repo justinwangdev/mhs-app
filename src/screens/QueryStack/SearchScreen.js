@@ -3,6 +3,7 @@ import { Alert } from 'react-native';
 
 import { Background, Header, Button, TextInput } from '../../components';
 import { apis } from '../../core/apis';
+import { language } from '../../core/languages';
 import { worknoValidator } from '../../core/utils';
 
 const SearchScreen = ({ navigation: { navigate }, route }) => {
@@ -28,8 +29,8 @@ const SearchScreen = ({ navigation: { navigate }, route }) => {
                     navigate("ResultScreen", { rawData: responsejson });
                 } else {
                     Alert.alert(
-                        '提示',
-                        '查無此單號'
+                        language.alert,
+                        language.worknoNotFound
                     )
                 }
             });
@@ -37,9 +38,9 @@ const SearchScreen = ({ navigation: { navigate }, route }) => {
 
     return (
         <Background>
-            <Header>查詢單號</Header>
+            <Header>{language.queryWorkno}</Header>
             <TextInput
-                label="派工單號"
+                label={language.workno}
                 returnKeyType="done"
                 keyboardType="number-pad"
                 value={workno.value}
@@ -48,7 +49,7 @@ const SearchScreen = ({ navigation: { navigate }, route }) => {
                 errorText={workno.error}
             />
             <Button mode="contained" onPress={_onSubmitPreesed}>
-                查詢
+                {language.query}
             </Button>
         </Background>
     )

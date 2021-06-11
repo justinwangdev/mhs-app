@@ -2,6 +2,7 @@ import React, { memo } from 'react';
 
 import { AuthContext } from '../../core/Context';
 import { Background, Logo, Header, Paragraph, Button } from '../../components';
+import { language } from '../../core/languages';
 
 const HomeScreen = ({ navigation }) => {
   const { signOut } = React.useContext(AuthContext);
@@ -9,13 +10,13 @@ const HomeScreen = ({ navigation }) => {
   return (
     <Background>
       <Logo />
-      <Header>上工囉！</Header>
+      <Header>{language.timeToWork}</Header>
       <Paragraph>
-        去工作
-    </Paragraph>
+        {language.goToWork}
+      </Paragraph>
       <Button onPress={() => signOut()}>
-        登出
-    </Button>
+        {language.logout}
+      </Button>
     </Background>
   );
 }

@@ -1,6 +1,7 @@
 import React, { useState, useEffect, memo } from "react";
 import { Text, View, StyleSheet, Button } from "react-native";
 import { BarCodeScanner } from "expo-barcode-scanner";
+import { language } from "../../core/languages";
 
 function BarcodeScannerInsert({ navigation: { navigate }, route }) {
   const [hasPermission, setHasPermission] = useState(null);
@@ -13,14 +14,14 @@ function BarcodeScannerInsert({ navigation: { navigate }, route }) {
     })();
   }, []);
 
-  useEffect(()=>{
+  useEffect(() => {
     setScanned(false);
-  },[])
+  }, [])
 
   const handleBarCodeScanned = ({ type, data }) => {
     //setScanned(true);
     //alert(`Bar code with type ${type} and data ${data} has been scanned!`);
-    navigate("InsertProcedure", {rawdata:data});
+    navigate("InsertProcedure", { rawdata: data });
   };
 
   if (hasPermission === null) {
@@ -43,14 +44,14 @@ function BarcodeScannerInsert({ navigation: { navigate }, route }) {
         style={StyleSheet.absoluteFillObject}
       />
 
-      
-        <Button
-          mode="contained"
-          title={scanned?"scanned":"手動輸入"}
-          onPress={() => {
-            navigate("InsertProcedure");
-          }}
-        />
+
+      <Button
+        mode="contained"
+        title={scanned ? "scanned" : language.manualInput}
+        onPress={() => {
+          navigate("InsertProcedure");
+        }}
+      />
     </View>
   );
 }

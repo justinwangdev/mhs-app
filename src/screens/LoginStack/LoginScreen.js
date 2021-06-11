@@ -6,6 +6,7 @@ import { Background, Logo, Header, Button, TextInput, BackButton } from '../../c
 import { theme } from '../../core/theme';
 import { apis } from '../../core/apis';
 import { usernameValidator, passwordValidator } from '../../core/utils';
+import { language } from '../../core/languages';
 
 const LoginScreen = ({ navigation }) => {
   const [username, setUsername] = useState({ value: '', error: '' });
@@ -41,10 +42,10 @@ const LoginScreen = ({ navigation }) => {
           }
           else {
             if (responseJson.type == "userName") {
-              alert("使用者不存在！");
+              alert(language.userNotFound);
             }
             else {
-              alert("密碼錯誤！");
+              alert(language.wrongPassword);
             }
           }
         })
@@ -57,10 +58,10 @@ const LoginScreen = ({ navigation }) => {
 
       <Logo />
 
-      <Header>歡迎回來</Header>
+      <Header>{language.welcomeBack}</Header>
 
       <TextInput
-        label="使用者帳號"
+        label={language.userAccount}
         returnKeyType="next"
         value={username.value}
         onChangeText={text => setUsername({ value: text, error: '' })}
@@ -70,7 +71,7 @@ const LoginScreen = ({ navigation }) => {
       />
 
       <TextInput
-        label="密碼"
+        label={language.password}
         returnKeyType="done"
         value={password.value}
         onChangeText={text => setPassword({ value: text, error: '' })}
@@ -83,12 +84,12 @@ const LoginScreen = ({ navigation }) => {
         <TouchableOpacity
           onPress={() => navigation.navigate('ForgotPasswordScreen')}
         >
-          <Text style={styles.label}>忘記密碼？</Text>
+          <Text style={styles.label}>{language.forgotPassword}</Text>
         </TouchableOpacity>
       </View>
 
       <Button mode="contained" onPress={_onLoginPressed}>
-        登入
+        {language.login}
       </Button>
     </Background>
   );

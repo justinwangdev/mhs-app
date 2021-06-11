@@ -3,6 +3,7 @@ import AsyncStorage from '@react-native-community/async-storage';
 import { Background, Paragraph, Header } from '../../components';
 import { apis } from '../../core/apis';
 import IndicatorScreen from '../OtherScreens/IndicatorScreen';
+import { language } from '../../core/languages';
 
 const ProfileScreen = () => {
   const [employeeName, setEmployeeName] = useState();
@@ -35,8 +36,8 @@ const ProfileScreen = () => {
   else
     return (
       <Background>
-        <Header>個人資料</Header>
-        <Paragraph>{`姓名： ${employeeName}`}</Paragraph>
+        <Header>{language.userInfo}</Header>
+        <Paragraph>{`${language.name}${employeeName}`}</Paragraph>
       </Background>
     );
 };

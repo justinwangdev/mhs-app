@@ -1,6 +1,7 @@
 import React, { memo } from 'react';
 
 import { Background, Logo, Header, Button, Paragraph } from '../../components/';
+import { language } from '../../core/languages';
 
 const Welcome = ({ navigation }) => (
   <Background>
@@ -11,7 +12,7 @@ const Welcome = ({ navigation }) => (
       Est. 1978
     </Paragraph>
     <Button mode="contained" onPress={() => navigation.navigate('LoginScreen')}>
-      登入
+      {language.login}
     </Button>
 
   </Background>
