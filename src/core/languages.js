@@ -31,7 +31,10 @@ export const cht = {
   "resultWeight": "回重",
   "queryWorkno": "查詢單號",
   "worknoNotFound": "查無此單號",
-  "query": "查詢"
+  "query": "查詢",
+  "home": "首頁",
+  "insert": "插入",
+  "profile": "個人資料"
 };
 
 export const en = {
@@ -60,12 +63,15 @@ export const en = {
   "logout": "Logout",
   "loading": "Loading",
   "userInfo": "User Information",
-  "name": "name: ",
+  "name": "Name: ",
   "queryResult": "Query Result",
   "procedure": "Procedure",
   "originalWeight": "Original Weight",
   "resultWeight": "Result Weight",
   "queryWorkno": "Query Work Number",
   "worknoNotFound": "Work Number Not Found",
-  "query": "Query"
+  "query": "Query",
+  "home": "Home",
+  "insert": "Insert",
+  "profile": "Profile"
 };

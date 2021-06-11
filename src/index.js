@@ -1,11 +1,13 @@
 import React from 'react';
 import AsyncStorage from '@react-native-community/async-storage';
 import { AuthContext } from './core/Context'
+import { cht, en } from './core/languages'
 import { MainTabScreens, LoginStackScreens } from './navigations';
 import { IndicatorScreen } from './screens/OtherScreens';
 
 
 const IndexScreens = () => {
+  const [language, setLanguage] = React.useState('en');
 
   const initLoginState = {
     isLoading: true,
