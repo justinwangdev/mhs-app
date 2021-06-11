@@ -1,15 +1,17 @@
 # 🔩  MHS-APP
 
+An application to improve factory workflow.
+
 [![Platform - Android](https://img.shields.io/badge/platform-Android-3ddc84.svg?style=flat&logo=android)](https://www.android.com)
 [![Platform - iOS](https://img.shields.io/badge/platform-iOS-000.svg?style=flat&logo=apple)](https://developer.apple.com/ios)
 
 ## 📈  Outline
 
-This is a cross-platform mobile application built for Ming Hui Sheng Enterprise Co., Ltd. 
+This is a cross-platform mobile application built for Ming Hui Sheng Enterprise Co., Ltd.
 
 There used to be only desktop application available. Therefore managers needed to write down each data and then brought it into the factory to check the production capacity.
 
-On the other hand, team leaders had to take notes in the facroty and then type them all over again using the only desktop located in a 100 thousand sq ft factory. 
+On the other hand, team leaders had to take notes in the facroty and then type them all over again using the only desktop located in a 100 thousand sq ft factory.
 
 With MHS-APP, they can just scan the barcode and query/insert the Mysql database using their cellphones without wasting time and energy wandering around.
 
@@ -19,8 +21,8 @@ With MHS-APP, they can just scan the barcode and query/insert the Mysql database
 
 * **Async Storage:** App would remember last login, so users don't need to login each time.
 * **Error Detection:** Not only empty-input detection, user name not exist, wrong password can be detected as well.
-* **User Token:** Each user comes with a unique token, which make Role-based Access Control possible.
-* **No Anonymous:** To protect valuable data, user has to log in to access database.
+* **User Token:** Each user comes with a unique token, which makes Role-based Access Control possible.
+* **No Anonymous:** To protect important datas, user has to log in to access database.
 
 ---
 
