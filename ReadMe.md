@@ -40,7 +40,14 @@ With MHS-APP, they can just scan barcodes and query/insert the Mysql database us
 
 ### 4. Bottom Tab Navigator & Stacks
 
-* 
+* **React Navigation Stack:** By using React-Navigation-Stack, uses can go to previous page.
+* **Material Bottom Tab Navigator:** It's not only aethetic, but really come in handy in the busy factory for single-hand operation.
+
+---
+
+### 5. Other Features
+
+* **Indicator Screen:** Adding indicator screen while requesting data from server elevates user experience.
 
 ---
 
