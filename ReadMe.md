@@ -13,48 +13,58 @@ There used to be only desktop application available. Therefore managers needed t
 
 On the other hand, team leaders had to take notes in the facroty and then type them all over again using the only desktop located in a 100 thousand sq ft factory.
 
-With MHS-APP, they can just scan the barcode and query/insert the Mysql database using their cellphones without wasting time and energy wandering around.
+With MHS-APP, they can just scan barcodes and query/insert the Mysql database using their cellphones without wasting unnecessary time and energy anymore.
 
 ## 📱  Features
 
-### 1. Login System
+### 1. Query Dispatch Lists
+
+* **Mobile Device Friendly Data Display:**
+
+---
+
+### 2. Insert Procedures
+
+* **Barcode Scanner:** Each container has a unique barcode. Using cellphone camera, tracking procedures couldn't be easier.
+* **Overwrite Detection:** 
+
+---
+### 3. Login System
 
 * **Async Storage:** App would remember last login, so users don't need to login each time.
-* **Error Detection:** Not only empty-input detection, user name not exist, wrong password can be detected as well.
+* **Error Detection:** It could detect not only empty-input detection, but user name not exist, wrong password can be detected as well.
 * **User Token:** Each user comes with a unique token, which makes Role-based Access Control possible.
-* **No Anonymous:** To protect important datas, user has to log in to access database.
+* **No Anonymous:** To protect important data, only approved users can access the database.
 
 ---
 
-### 2. Insert Procedure
+### 4. Bottom Tab Navigator & Stacks
 
-* Barcode Scannde: Each container has a unique barcode. Using cellphone camera, tracking procedures couldn't be easier.
+* 
 
 ---
 
+## 🛠  Built Environment
 
-## 🛠  Setup
+| Environment   | version | 
+| ------------- | ------- |
+| Mac OS        | 10.15.6 |
+| Node.js       | 12.18.2 |
+| expo-cli      | 3.22.1  |
 
-Modify the address of express server on src/core/apis.js.
+## ⚙  Setup
+
+Modify the address of Express-Server on src/core/apis.js.
 Then run:
 ```bash 
-$ npm install.
-$ expo start.
+$ npm install
+$ expo start
 ```
-
-### Built Environment
-
-| Environment           | version | 
-| --------------------- | ------- |
-| Mac OS                | 10.15.6 |
-| Node.js               | 12.18.2 |
-| expo-cli              | 3.22.1  |
-
 
 ## 🙋  Appendix and FAQ
 
-:::info
-**Find this document incomplete?** Leave a comment!
-:::
+
+**Have any qeustions?** Contact me at`${myGithubAccount}[at]gmail.com`
+
 
 ###### tags: `react native` `MERN stack`
