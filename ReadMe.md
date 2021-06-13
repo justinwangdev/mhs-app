@@ -26,14 +26,15 @@ With MHS-APP, they can just scan barcodes and query/insert the Mysql database us
 ### 2. Insert Procedures
 
 * **Barcode Scanner:** Each container has a unique barcode. Using a cellphone camera, tracking procedures couldn't be easier.
+![barcode](./demos/barcode.gif)
 * **Overwrite Detection:** 
 
 ---
 ### 3. Login System
 
-![login](./demos/login.gif)
 * **Async Storage:** App would remember the last login, so users don't need to log in each time.
 * **Error Detection:** It could detect not only empty-input detection but user name not exist, wrong password can be detected as well.
+![login](./demos/login.gif)
 * **User Token:** Each user comes with a unique token, which makes Role-based Access Control possible.
 * **No Anonymous:** To protect important data, only approved users can access the database.
 
