@@ -31,6 +31,7 @@ With MHS-APP, they can just scan barcodes and query/insert the Mysql database us
 ---
 ### 3. Login System
 
+![login](./demos/login.gif)
 * **Async Storage:** App would remember the last login, so users don't need to log in each time.
 * **Error Detection:** It could detect not only empty-input detection but user name not exist, wrong password can be detected as well.
 * **User Token:** Each user comes with a unique token, which makes Role-based Access Control possible.
@@ -40,7 +41,7 @@ With MHS-APP, they can just scan barcodes and query/insert the Mysql database us
 
 ### 4. Bottom Tab Navigator & Stacks
 
-* **React Navigation Stack:** By using React-Navigation-Stack, uses can go to the previous page.
+* **React Navigation Stack:** By using React-Navigation-Stack, users can go to the previous page.
 * **Material Bottom Tab Navigator:** It's not only aesthetic but comes in handy in the busy factory for single-hand operations.
 
 ---
