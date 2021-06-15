@@ -3,6 +3,7 @@ import { Alert } from 'react-native';
 
 import { Background, Header, Button, TextInput, DropDown, BackButton } from '../../components';
 import { apis } from '../../core/apis';
+import { language } from '../../core/languages';
 import { worknoValidator, containernoValidator, containerWeightValidator, procedureValidator } from '../../core/utils';
 import { IndicatorScreen } from '../OtherScreens'
 
@@ -75,13 +76,13 @@ const InsertProcedure = ({ route, navigation }) => {
             .then((responsejson) => {
                 if (!(responsejson.length < 1 || responsejson == undefined)) {
                     Alert.alert(
-                        '提示',
-                        `此流程原本就存在於系統中，重量為${responsejson[0].goweight}KG，已覆寫為${weight.value}kg`,
+                        language.alert,
+                        `${language.procedureExist1}${responsejson[0].goweight}${language.procedureExist2}${weight.value}kg`,
                     )
                 } else {
                     Alert.alert(
-                        '提示',
-                        '新增流程成功！'
+                        language.alert,
+                        language.insertProcedureSuccess
                     )
                 }
             });
@@ -93,9 +94,9 @@ const InsertProcedure = ({ route, navigation }) => {
         return (
             <Background>
                 <BackButton goBack={() => navigation.goBack()} />
-                <Header>新增製程</Header>
+                <Header>{language.insertProcedure}</Header>
                 <TextInput
-                    label="派工單號"
+                    label={language.workno}
                     returnKeyType="done"
                     keyboardType="number-pad"
                     value={workno.value}
@@ -104,7 +105,7 @@ const InsertProcedure = ({ route, navigation }) => {
                     errorText={workno.error}
                 />
                 <TextInput
-                    label="桶號"
+                    label={language.containerno}
                     returnKeyType="done"
                     keyboardType="number-pad"
                     value={containerno.value}
@@ -115,16 +116,16 @@ const InsertProcedure = ({ route, navigation }) => {
 
                 <DropDown
                     items={codeTable}
-                    placeholder='選擇製程'
+                    placeholder={language.chooseProcedure}
                     onChangeItem={item => setProcedure({ value: item.value, error: '' })}
                     error={!!procedure.error}
                     errorText={procedure.error}
                     searchable={true}
-                    searchablePlaceholder="查詢製程"
+                    searchablePlaceholder={language.searchProcedure}
                 />
 
                 <TextInput
-                    label="重量（公斤）"
+                    label={language.weightKG}
                     returnKeyType="done"
                     keyboardType="number-pad"
                     value={weight.value}
@@ -134,8 +135,8 @@ const InsertProcedure = ({ route, navigation }) => {
                 />
 
                 <Button mode="contained" onPress={_onSubmitPreesed}>
-                    寫入資料庫
-                    </Button>
+                    {language.insertDatabase}
+                </Button>
             </Background>
         )
 }

@@ -10,6 +10,7 @@ import InsertionStackScreens from './InsertionStackScreens';
 import QueryStackScreens from './QueryStackScreens';
 import { InsertProcedure } from '../screens/InsertionStack';
 import { theme } from '../core/theme';
+import { language } from '../core/languages';
 
 const Tab = createMaterialBottomTabNavigator();
 
@@ -23,7 +24,7 @@ const MainTabScreens = () => (
         name="Home"
         component={HomeScreen}
         options={{
-          tabBarLabel: '首頁',
+          tabBarLabel: language.home,
           tabBarColor: theme.colors.surface,
           tabBarIcon: ({ color }) => (
             <Icon name="ios-home" color={color} size={26} />
@@ -34,7 +35,7 @@ const MainTabScreens = () => (
         name="Insert"
         component={InsertionStackScreens}
         options={{
-          tabBarLabel: '插入',
+          tabBarLabel: language.insert,
           tabBarColor: theme.colors.surface,
           tabBarIcon: ({ color }) => (
             <Icon name="ios-aperture" color={color} size={26} />
@@ -45,7 +46,7 @@ const MainTabScreens = () => (
         name="DEBUG"
         component={QueryStackScreens}
         options={{
-          tabBarLabel: '查詢',
+          tabBarLabel: language.query,
           tabBarColor: theme.colors.surface,
           tabBarIcon: ({ color }) => (
             <Icon name="ios-search" color={color} size={26} />
@@ -56,7 +57,7 @@ const MainTabScreens = () => (
         name="Profile"
         component={ProfileScreen}
         options={{
-          tabBarLabel: '個人資料',
+          tabBarLabel: language.profile,
           tabBarColor: theme.colors.surface,
           tabBarIcon: ({ color }) => (
             <Icon name="ios-person" color={color} size={26} />

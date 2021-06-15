@@ -4,6 +4,7 @@ import { Text, StyleSheet, TouchableOpacity } from 'react-native';
 import { Background, BackButton, Logo, Header, Paragraph } from '../../components';
 import { emailValidator } from '../../core/utils';
 import { theme } from '../../core/theme';
+import { language } from '../../core/languages';
 
 const ForgotPasswordScreen = ({ navigation }) => {
   const [email, setEmail] = useState({ value: '', error: '' });
@@ -51,8 +52,8 @@ const ForgotPasswordScreen = ({ navigation }) => {
         <Text style={styles.label}>← Back to login</Text>
       </TouchableOpacity> */}
       <Paragraph>
-        請洽分機902
-    </Paragraph>
+        {language.call902}
+      </Paragraph>
     </Background>
   );
 };
