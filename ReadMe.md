@@ -19,24 +19,31 @@ With MHS-APP, they can just scan barcodes and query/insert the Mysql database us
 
 ### 1. Query Dispatch Lists
 
-* **Mobile Device Friendly Data Display:**
+![query](./demos/queryDemo.gif)
+* **Mobile Device Friendly Data Display:** Each page represents a container, and each row shows which procedure it went through and displays it weight before/after that procedure.
+* **Product Parameter** On the top of the screen, parameters of the product would be shown.
+* **Error Detection:** Error detection for every input field in this app.
 
 ---
 
 ### 2. Insert Procedures
 
+![barcode](./demos/barcodeScanner.gif)
 * **Barcode Scanner:** Each container has a unique barcode. Using a cellphone camera, tracking procedures couldn't be easier.
 
-![barcode](./demos/barcode.gif)
-* **Overwrite Detection:** 
+![insert](./demos/insertDemo.gif)
+* **Manual Input:** User can choose to input manually.
+* **Searchable Dropdown Menu:** The app will render procedures exist in the database, and then let user to search inside the dropdown menu.
+* **Overwrite Detection:** If the data already exists, the app will imform user the original weight and then update it.
 
 ---
 ### 3. Login System
 
-* **Async Storage:** App would remember the last login, so users don't need to log in each time.
+![login](./demos/login.gif)
 * **Error Detection:** It could detect not only empty-input detection but user name not exist, wrong password can be detected as well.
 
-![login](./demos/login.gif)
+![async](./demos/loginAsyncStorage.gif)
+* **Async Storage:** App would remember the last login, so users don't need to log in each time.
 * **User Token:** Each user comes with a unique token, which makes Role-based Access Control possible.
 * **No Anonymous:** To protect important data, only approved users can access the database.
 
@@ -44,6 +51,7 @@ With MHS-APP, they can just scan barcodes and query/insert the Mysql database us
 
 ### 4. Bottom Tab Navigator & Stacks
 
+![navigation](./demos/navigation.gif)
 * **React Navigation Stack:** By using React-Navigation-Stack, users can go to the previous page.
 * **Material Bottom Tab Navigator:** It's not only aesthetic but comes in handy in the busy factory for single-hand operations.
 
@@ -71,6 +79,8 @@ Then run:
 $ npm install
 $ expo start
 ```
+
+note: This app is meant to use with the Express-Server.
 
 ## 🙋  Appendix and FAQ
 
