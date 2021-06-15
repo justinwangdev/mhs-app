@@ -20,7 +20,7 @@ With MHS-APP, they can just scan barcodes and query/insert the Mysql database us
 ### 1. Query Dispatch Lists
 
 ![query](./demos/queryDemo.gif)
-* **Mobile Device Friendly Data Display:** Each page represents a container, and each row shows which procedure it went through and displays it weight before/after that procedure.
+* **Mobile Device Friendly Data Display:** Each page represents a container, and each row shows which procedure it went through and displays its weight before/after that procedure.
 * **Product Parameter** On the top of the screen, parameters of the product would be shown.
 * **Error Detection:** Error detection for every input field in this app.
 
@@ -30,11 +30,11 @@ With MHS-APP, they can just scan barcodes and query/insert the Mysql database us
 
 ![barcode](./demos/barcodeScanner.gif)
 * **Barcode Scanner:** Each container has a unique barcode. Using a cellphone camera, tracking procedures couldn't be easier.
+* **Overwrite Detection:** If the data already exists, the app will inform the user of the original weight and then update it.
 
 ![insert](./demos/insertDemo.gif)
 * **Manual Input:** User can choose to input manually.
-* **Searchable Dropdown Menu:** The app will render procedures exist in the database, and then let user to search inside the dropdown menu.
-* **Overwrite Detection:** If the data already exists, the app will imform user the original weight and then update it.
+* **Searchable Dropdown Menu:** The app will render procedures that exist in the database, and then let the user search inside the dropdown menu.
 
 ---
 ### 3. Login System
@@ -80,12 +80,12 @@ $ npm install
 $ expo start
 ```
 
-note: This app is meant to use with the Express-Server.
+note: This app should be used with the Express-Server.
 
 ## 🙋  Appendix and FAQ
 
 
-**Have any qeustions?** Contact me at`${myGithubAccount}[at]gmail.com`
+**Have any questions?** Contact me at`${myGithubAccount}[at]gmail.com`
 
 
 ###### tags: `react native` `MERN stack`
