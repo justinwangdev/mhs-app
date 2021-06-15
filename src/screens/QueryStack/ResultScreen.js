@@ -48,7 +48,7 @@ const ResultScreen = ({ navigation, route }) => {
     return (
         <Background>
             <BackButton goBack={() => navigation.goBack()} />
-            <Header>{language.queryResult}</Header>
+            <Header>{language.queryResult + route.params.workno}</Header>
             {productContent}
             <ScrollView style={{ width: '100%', marginBottom: '10%' }}>
                 <DataTable>

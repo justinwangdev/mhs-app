@@ -1,7 +1,6 @@
 import React from 'react';
 import AsyncStorage from '@react-native-community/async-storage';
 import { AuthContext } from './core/Context'
-import { language } from './core/languages'
 import { MainTabScreens, LoginStackScreens } from './navigations';
 import { IndicatorScreen } from './screens/OtherScreens';
 

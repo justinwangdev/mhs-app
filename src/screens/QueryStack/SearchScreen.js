@@ -26,7 +26,7 @@ const SearchScreen = ({ navigation: { navigate }, route }) => {
             .then((response) => response.json())
             .then((responsejson) => {
                 if (!(responsejson.length < 1 || responsejson == undefined)) {
-                    navigate("ResultScreen", { rawData: responsejson });
+                    navigate("ResultScreen", { rawData: responsejson, workno: workno.value });
                 } else {
                     Alert.alert(
                         language.alert,

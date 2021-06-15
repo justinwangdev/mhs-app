@@ -1,5 +1,3 @@
-export const language = en;
-
 const cht = {
   login: "登入",
   userNotFound: "使用者不存在！",
@@ -27,7 +25,7 @@ const cht = {
   loading: "資料讀取中",
   userInfo: "個人資料",
   name: "姓名： ",
-  queryResult: "查詢結果",
+  queryResult: "單號：",
   procedure: "製程",
   originalWeight: "重量",
   resultWeight: "回重",
@@ -53,7 +51,7 @@ const en = {
   alert: "Prompt",
   procedureExist1: "Procedure exists! It was ",
   procedureExist2: ", and is modified to ",
-  insertProcedureSuccess: "Insert Procedure Successful!",
+  insertProcedureSuccess: "Insert Procedure Successfully!",
   insertProcedure: "Insert Procedure",
   workno: "Work Number",
   containerno: "Container Number",
@@ -67,11 +65,11 @@ const en = {
   loading: "Loading",
   userInfo: "User Information",
   name: "Name: ",
-  queryResult: "Query Result",
+  queryResult: "No. ",
   procedure: "Procedure",
   originalWeight: "Original Weight",
   resultWeight: "Result Weight",
-  containerFooter: "ontainer #",
+  containerFooter: "container ",
   queryWorkno: "Query Work Number",
   worknoNotFound: "Work Number Not Found",
   query: "Query",
@@ -79,3 +77,5 @@ const en = {
   insert: "Insert",
   profile: "Profile"
 };
+
+export const language = en;
