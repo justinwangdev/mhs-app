@@ -17,27 +17,7 @@ With MHS-APP, they can just scan barcodes and query/insert the Mysql database us
 
 ## 📱  Features
 
-### 1. Query Dispatch Lists
-
-![query](./demos/queryDemo.gif)
-* **Mobile Device Friendly Data Display:** Each page represents a container, and each row shows which procedure it went through and displays its weight before/after that procedure.
-* **Product Parameter** On the top of the screen, parameters of the product would be shown.
-* **Error Detection:** Error detection for every input field in this app.
-
----
-
-### 2. Insert Procedures
-
-![barcode](./demos/barcodeScanner.gif)
-* **Barcode Scanner:** Each container has a unique barcode. Using a cellphone camera, tracking procedures couldn't be easier.
-* **Overwrite Detection:** If the data already exists, the app will inform the user of the original weight and then update it.
-
-![insert](./demos/insertDemo.gif)
-* **Manual Input:** User can choose to input manually.
-* **Searchable Dropdown Menu:** The app will render procedures that exist in the database, and then let the user search inside the dropdown menu.
-
----
-### 3. Login System
+### 1. Login System
 
 ![login](./demos/login.gif)
 * **Error Detection:** It could detect not only empty-input detection but user name not exist, wrong password can be detected as well.
@@ -46,6 +26,27 @@ With MHS-APP, they can just scan barcodes and query/insert the Mysql database us
 * **Async Storage:** App would remember the last login, so users don't need to log in each time.
 * **User Token:** Each user comes with a unique token, which makes Role-based Access Control possible.
 * **No Anonymous:** To protect important data, only approved users can access the database.
+
+---
+
+### 2. Query Dispatch Lists
+
+![query](./demos/queryDemo.gif)
+* **Mobile Device Friendly Data Display:** Each page represents a container, and each row shows which procedure it went through and displays its weight before/after that procedure.
+* **Product Parameter** On the top of the screen, parameters of the product would be shown.
+* **Error Detection:** Error detection for every input field in this app.
+
+---
+
+### 3. Insert Procedures
+
+![barcode](./demos/barcodeScanner.gif)
+* **Barcode Scanner:** Each container has a unique barcode. Using a cellphone camera, tracking procedures couldn't be easier.
+* **Overwrite Detection:** If the data already exists, the app will inform the user of the original weight and then update it.
+
+![insert](./demos/insertDemo.gif)
+* **Manual Input:** User can choose to input manually.
+* **Searchable Dropdown Menu:** The app will render procedures that exist in the database, and then let the user search inside the dropdown menu.
 
 ---
 
